@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <header>
+        <a href="/">Home</a>
+        <a href="/users/">Users</a>
+        <a href="/blogpage">Blogs</a>
+    </header>
+    <h1>List of all users</h1>
+    <ul>
+        {{#if users}}
+        {{#each users}}
+            <li>
+                <span>{{name}}</span>
+                <span>{{email}}</span>
+                <span><a href="/users/{{_id}}">view more</a></span>
+            </li>
+        {{/each}}
+
+        {{else}}
+        <h5>No users found</h5>
+        {{/if}}
+    </ul>
+</body>
+</html>
